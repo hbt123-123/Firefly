@@ -13,13 +13,13 @@
 **潼潼不是洞洞的博客** 是一款基于 Astro 框架和 Firefly 模板开发的清新美观且现代化个人博客。当然，我希望把它打造为我的个人博客，记录我的学习、工作、生活等。我会在上面发布一些我的学习笔记、行业思考、技术文章和实践活动。希望和我有共同话题的人能够相互认识，分享经验，学习知识。
 
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+**🖥️在线预览： [Firefly - Demo site](https:// lztblog.netlify.app)**
 
-**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
+**🏠我的博客： [https://blog.cuteleaf.cn](https:// lztblog.netlify.app)**
 
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
+**⭐Firefly开源地址：[https://github.com/hbt123-123/Firefly](https://github.com/hbt123-123/Firefly)** 
 
-::github{repo="CuteLeaf/Firefly"}
+::github{repo="hbt123-123/Firefly"}
 
 ::github{repo="CuteLeaf/Firefly"}
 
