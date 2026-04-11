@@ -21,6 +21,14 @@ export const galleryConfig: GalleryConfig = {
 			date: "2026-01-01",
 			tags: ["崩坏星穹铁道", "流萤"],
 		},
+		{
+			id: "zzq-ps-2026",
+			name: "ZZQ的P图相册",
+			description: "致力于展示zzq的P图能力，分享美",
+			location: "遵义",
+			date: "2026-04-12",
+			tags: ["zzq", "P图", "photoshop"],
+		},
 	],
 
 	// 瀑布流最小列宽(px)，浏览器根据容器宽度自动计算列数，默认 240
