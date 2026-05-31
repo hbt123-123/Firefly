@@ -50,6 +50,9 @@ jspm_packages/
 # Astro
 .astro/
 
+# Skills
+skills/
+
 # Output of 'npm pack'
 *.tgz
 
