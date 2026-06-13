@@ -3,7 +3,7 @@ title: 八字算命入门到精通：一份让你从零开始的完全指南
 published: 2026-03-14
 updated: 2026-03-14
 description: 从零开始，系统学习中国传统八字算命术，掌握核心概念，读懂命运密码。图文结合，专业术语与大白话结合。
-tags: [八字算命]
+tags: [算命]
 category: 传统文化
 draft: false
 pinned: false

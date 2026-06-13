@@ -58,3 +58,6 @@ skills/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Project documentation
+AGENTS.md

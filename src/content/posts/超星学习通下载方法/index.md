@@ -4,14 +4,13 @@ published: 2026-06-03
 description: 超星学习通（chaoxing.com）视频与PPT附件的完整下载方法，通过浏览器控制台提取CDN直链，配合curl完成下载
 image: ""
 tags: [超星学习通, 下载]
-category: 教程
+category: 技术教程
 draft: false
-pinned: true
+pinned: false
 slug: chaoxing-download
 lang: zh-CN
 comment: true
 ---
-
 # 超星学习通（chaoxing.com）视频 & PPT 下载方法
 
 ## 核心原理
@@ -64,13 +63,13 @@ comment: true
 
 输出中重点关注以下字段：
 
-| 字段 | 用途 |
-|------|------|
-| `data.download` | CDN 下载接口（`d0.cldisk.com/download/...`） |
-| `data.http` | CDN 流式直链（`s2.cldisk.com/.../sd.mp4`，只能播不能下） |
-| `data.pdf` | PPT 转 PDF 直链（文档类型） |
-| `data.dtoken` | 下载 token（需配合 Cookie 使用） |
-| `data.filename` | 原始文件名 |
+| 字段              | 用途                                                       |
+| ----------------- | ---------------------------------------------------------- |
+| `data.download` | CDN 下载接口（`d0.cldisk.com/download/...`）             |
+| `data.http`     | CDN 流式直链（`s2.cldisk.com/.../sd.mp4`，只能播不能下） |
+| `data.pdf`      | PPT 转 PDF 直链（文档类型）                                |
+| `data.dtoken`   | 下载 token（需配合 Cookie 使用）                           |
+| `data.filename` | 原始文件名                                                 |
 
 ### 第二步：下载 PPT
 
@@ -98,13 +97,13 @@ curl.exe -L -o "01.mp4" -H "Referer: https://mooc1.chaoxing.com/" "https://d0.cl
 
 ## 各类 URL 的可用性对比
 
-| URL 类型 | 示例 | 用途 | 需要 Cookie？ |
-|----------|------|------|:---:|
-| `d0.cldisk.com/download/...?at_=&ak_=&ad_=` | CDN 下载接口 | **下载视频/PPT** ✅ | ❌ 不需要 |
-| `s3.cldisk.com/.../pdf/xxx.pdf` | CDN PDF 直链 | **下载 PPT PDF** ✅ | ❌ 不需要 |
-| `s2.cldisk.com/.../sd.mp4?at_=&ak_=&ad_=` | CDN 流式播放 | 浏览器能播但不能下载 ⚠️ | ❌ 不需要 |
-| `d0.ananas.chaoxing.com/download/...` | 超星下载接口 | 403 被拒 ❌ | ✅ 需要 |
-| `d0.ananas.chaoxing.com/{id}/{dtoken}/...` | dtoken 拼接 | 403 被拒 ❌ | ✅ 需要 |
+| URL 类型                                      | 示例         | 用途                      | 需要 Cookie？ |
+| --------------------------------------------- | ------------ | ------------------------- | :-----------: |
+| `d0.cldisk.com/download/...?at_=&ak_=&ad_=` | CDN 下载接口 | **下载视频/PPT** ✅ |   ❌ 不需要   |
+| `s3.cldisk.com/.../pdf/xxx.pdf`             | CDN PDF 直链 | **下载 PPT PDF** ✅ |   ❌ 不需要   |
+| `s2.cldisk.com/.../sd.mp4?at_=&ak_=&ad_=`   | CDN 流式播放 | 浏览器能播但不能下载 ⚠️ |   ❌ 不需要   |
+| `d0.ananas.chaoxing.com/download/...`       | 超星下载接口 | 403 被拒 ❌               |    ✅ 需要    |
+| `d0.ananas.chaoxing.com/{id}/{dtoken}/...`  | dtoken 拼接  | 403 被拒 ❌               |    ✅ 需要    |
 
 ## 完整脚本
 
@@ -112,13 +111,13 @@ curl.exe -L -o "01.mp4" -H "Referer: https://mooc1.chaoxing.com/" "https://d0.cl
 
 ## 其他方案尝试记录
 
-| 方案 | 结果 |
-|------|------|
-| yt-dlp + `--cookies-from-browser edge/chrome` | ❌ Windows DPAPI 加密错误，无法提取 Cookie |
-| Python + `browser_cookie3` 库 | ❌ 需要管理员权限 |
-| Python 直接请求超星 API | ❌ 无登录 Cookie，被重定向到登录页 |
-| 浏览器 CORS XHR 下载 | ❌ `d0.ananas` 跨域 CORS 阻止 + 403 |
-| **curl + cldisk download 接口** | ✅ **成功！886 MB 视频 2 分 48 秒下载完成** |
+| 方案                                           | 结果                                             |
+| ---------------------------------------------- | ------------------------------------------------ |
+| yt-dlp +`--cookies-from-browser edge/chrome` | ❌ Windows DPAPI 加密错误，无法提取 Cookie       |
+| Python +`browser_cookie3` 库                 | ❌ 需要管理员权限                                |
+| Python 直接请求超星 API                        | ❌ 无登录 Cookie，被重定向到登录页               |
+| 浏览器 CORS XHR 下载                           | ❌`d0.ananas` 跨域 CORS 阻止 + 403             |
+| **curl + cldisk download 接口**          | ✅**成功！886 MB 视频 2 分 48 秒下载完成** |
 
 ## 关键发现
 

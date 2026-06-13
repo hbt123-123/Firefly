@@ -7,6 +7,7 @@ tags: [新闻宣传, 写作技巧, 培训指南]
 category: 宣传培训
 draft: false
 pinned: false
+slug: news-publicity-training-guide
 lang: zh-CN
 comment: true
 ---

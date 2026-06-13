@@ -5,6 +5,7 @@ author: "赵玉凤"
 category: "期末考试"
 tags: ["环境保护法规", "期末考试"]
 description: "中南民族大学环境保护法规范期末考试复习资料，涵盖核心考点梳理、模拟试题（选择题、判断题、计算题、简答题、材料分析题）及核心法条速记，助力期末备考。"
+slug: environmental-protection-law-review
 ---
 
 **课程**：环境保护法规
