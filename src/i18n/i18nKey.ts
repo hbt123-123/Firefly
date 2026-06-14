@@ -54,6 +54,7 @@ enum I18nKey {
 	musicError = "musicError",
 	musicPlay = "musicPlay",
 	musicPause = "musicPause",
+	musicClose = "musicClose",
 	musicProgress = "musicProgress",
 	musicCover = "musicCover",
 	musicNoCover = "musicNoCover",

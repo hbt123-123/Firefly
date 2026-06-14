@@ -63,6 +63,9 @@ declare global {
 			seekToTime: (time: number) => void;
 			playTrackByIndex: (index: number) => void;
 			loadTrack: (index: number, autoPlay: boolean) => void;
+			close: () => void;
+			reopen: () => void;
+			isClosed: () => boolean;
 		};
 	}
 

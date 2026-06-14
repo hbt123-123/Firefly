@@ -35,6 +35,7 @@ export const ru: Translation = {
 	[Key.musicError]: "Ошибка плеера",
 	[Key.musicPlay]: "Воспроизвести",
 	[Key.musicPause]: "Пауза",
+	[Key.musicClose]: "Закрыть музыку",
 	[Key.musicProgress]: "Прогресс воспроизведения",
 	[Key.musicCover]: "Обложка",
 	[Key.musicNoCover]: "Нет обложки",

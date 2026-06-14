@@ -156,7 +156,7 @@ if (isLocalSrcLogo) {
             </div>
         </div>
         {musicPlayerConfig.showInNavbar && (
-            <div id="music-nav-panel" class="float-panel float-panel-closed absolute transition-all right-16 p-2 pt-4.5 w-80 z-50">
+            <div id="music-nav-panel" class={`float-panel absolute transition-all right-16 p-2 pt-4.5 w-80 z-50 ${musicPlayerConfig.defaultOpen ? '' : 'float-panel-closed'}`}>
                 <MusicPlayer />
             </div>
         )}
@@ -192,7 +192,15 @@ function loadButtonScript() {
         musicBtn.onclick = function () {
             let musicPanel = document.getElementById("music-nav-panel");
             if (musicPanel) {
-                musicPanel.classList.toggle("float-panel-closed");
+                // Check if player was closed via close button
+                var mgr = window.__fireflyMusic;
+                if (mgr && mgr.isClosed && mgr.isClosed()) {
+                    // Reopen the player
+                    mgr.reopen();
+                    musicPanel.classList.remove("float-panel-closed");
+                } else {
+                    musicPanel.classList.toggle("float-panel-closed");
+                }
             }
         };
     }

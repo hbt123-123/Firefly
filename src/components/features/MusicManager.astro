@@ -35,6 +35,7 @@ const managerConfigStr = JSON.stringify({
 	volume: config.volume ?? 0.7,
 	playMode: config.playMode ?? "list",
 	showLyrics: config.showLyrics ?? true,
+	autoPlay: config.autoPlay ?? false,
 	i18n: {
 		noPlaying: i18n(I18nKey.musicNoPlaying),
 		lyrics: i18n(I18nKey.musicLyrics),
@@ -374,7 +375,7 @@ const managerConfigStr = JSON.stringify({
                     isMuted: state.isMuted
                 });
 
-                loadTrack(startIndex, false);
+                loadTrack(startIndex, config.autoPlay === true);
             } else {
                 state.initialized = true;
                 emit('fm:init', {
@@ -434,7 +435,24 @@ const managerConfigStr = JSON.stringify({
         seek: seek,
         seekToTime: seekToTime,
         playTrackByIndex: playTrackByIndex,
-        loadTrack: loadTrack
+        loadTrack: loadTrack,
+        // 关闭音乐播放器：暂停播放并记录关闭状态
+        close: function () {
+            audio.pause();
+            state.isPlaying = false;
+            emit('fm:play-state', { isPlaying: false });
+            localStorage.setItem('music-player-closed', 'true');
+            emit('fm:closed', {});
+        },
+        // 重新打开音乐播放器：清除关闭状态
+        reopen: function () {
+            localStorage.removeItem('music-player-closed');
+            emit('fm:reopened', {});
+        },
+        // 检查是否已被关闭
+        isClosed: function () {
+            return localStorage.getItem('music-player-closed') === 'true';
+        }
     };
 })();
 </script>

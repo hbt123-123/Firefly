@@ -1,6 +1,7 @@
 ---
 import WidgetLayout from "@/components/common/WidgetLayout.astro";
 import MusicPlayer from "@/components/features/MusicPlayer.astro";
+import { Icon } from "astro-icon/components";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 
@@ -15,4 +16,62 @@ const widgetId = `music-widget-${Math.random().toString(36).substring(2, 9)}`;
 
 <WidgetLayout id={`${widgetId}-layout`} class={className} style={style} name={i18n(I18nKey.music)}>
     <MusicPlayer id={widgetId} />
+    <Fragment slot="title-icon">
+        <button class="btn-close-music text-neutral-400 hover:text-red-500 dark:hover:text-red-400 transition-colors p-1 active:scale-90" title={i18n(I18nKey.musicClose)} aria-label={i18n(I18nKey.musicClose)}>
+            <Icon name="material-symbols:close-rounded" class="text-lg" aria-hidden="true" />
+        </button>
+    </Fragment>
 </WidgetLayout>
+
+<script>
+(function () {
+    var closeBtns = document.querySelectorAll('.btn-close-music');
+    if (closeBtns.length === 0) return;
+
+    var mgr = window.__fireflyMusic;
+    if (!mgr) return;
+
+    // Check if player was previously closed
+    if (mgr.isClosed && mgr.isClosed()) {
+        closeBtns.forEach(function (btn) {
+            var widgetLayout = btn.closest('widget-layout') as HTMLElement | null;
+            if (widgetLayout) {
+                widgetLayout.style.display = 'none';
+            }
+            var parentPanel = btn.closest('.float-panel');
+            if (parentPanel) {
+                parentPanel.classList.add('float-panel-closed');
+            }
+        });
+        return;
+    }
+
+    closeBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            mgr!.close();
+            var widgetLayout = btn.closest('widget-layout') as HTMLElement | null;
+            if (widgetLayout) {
+                widgetLayout.style.display = 'none';
+            }
+            var parentPanel = btn.closest('.float-panel');
+            if (parentPanel) {
+                parentPanel.classList.add('float-panel-closed');
+            }
+        });
+    });
+
+    // Listen for reopen event (from navbar button)
+    window.addEventListener('fm:reopened', function () {
+        closeBtns.forEach(function (btn) {
+            var wl = btn.closest('widget-layout') as HTMLElement | null;
+            if (wl) {
+                wl.style.display = '';
+            }
+            var pp = btn.closest('.float-panel');
+            if (pp) {
+                pp.classList.remove('float-panel-closed');
+            }
+        });
+    });
+})();
+</script>

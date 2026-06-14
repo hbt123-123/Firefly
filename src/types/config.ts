@@ -651,6 +651,12 @@ export type MusicPlayerConfig = {
 	// 是否在导航栏显示音乐播放器
 	showInNavbar?: boolean;
 
+	// 是否在网页加载完成后自动播放音乐
+	autoPlay?: boolean;
+
+	// 是否默认展开音乐面板（导航栏音乐面板）
+	defaultOpen?: boolean;
+
 	// Meting API 配置
 	meting?: {
 		// Meting API 地址

@@ -35,6 +35,7 @@ export const ja: Translation = {
 	[Key.musicError]: "プレーヤーエラー",
 	[Key.musicPlay]: "再生",
 	[Key.musicPause]: "一時停止",
+	[Key.musicClose]: "音楽を閉じる",
 	[Key.musicProgress]: "再生の進捗",
 	[Key.musicCover]: "カバー",
 	[Key.musicNoCover]: "カバーなし",
