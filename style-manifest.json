@@ -1,0 +1,638 @@
+{
+  "meta": {
+    "name": "Firefly Blog Design System",
+    "version": "1.0.0",
+    "description": "Astro 5.17.3 静态博客主题模板 (Firefly) 完整设计系统样式清单",
+    "basedOn": "fuwari",
+    "techStack": ["Astro 5.17.3", "TypeScript", "Svelte 5", "Tailwind CSS 4"],
+    "generatedDate": "2026-07-20"
+  },
+
+  "themeConfig": {
+    "hue": 165,
+    "hueRange": "0-360（用户可自定义）",
+    "defaultMode": "system",
+    "colorSpace": "oklch",
+    "description": "所有主题色基于 oklch 色彩空间，通过 --hue 变量动态控制色相，实现一键换色"
+  },
+
+  "colors": {
+    "light": {
+      "primary": "oklch(0.70 0.14 var(--hue))",
+      "pageBg": "oklch(0.95 0.01 var(--hue))",
+      "cardBg": "#ffffff",
+      "cardBgTransparent": "rgba(255, 255, 255, 0.6)",
+      "btnContent": "oklch(0.55 0.12 var(--hue))",
+      "btnRegularBg": "oklch(0.95 0.025 var(--hue))",
+      "btnRegularBgHover": "oklch(0.9 0.05 var(--hue))",
+      "btnRegularBgActive": "oklch(0.85 0.08 var(--hue))",
+      "btnPlainBgHover": "oklch(0.95 0.025 var(--hue))",
+      "btnPlainBgActive": "oklch(0.98 0.01 var(--hue))",
+      "btnCardBgHover": "oklch(0.98 0.005 var(--hue))",
+      "btnCardBgActive": "oklch(0.9 0.03 var(--hue))",
+      "deepText": "oklch(0.25 0.02 var(--hue))",
+      "titleActive": "oklch(0.6 0.1 var(--hue))",
+      "lineDivider": "rgba(0, 0, 0, 0.08)",
+      "lineColor": "rgba(0, 0, 0, 0.1)",
+      "metaDivider": "rgba(0, 0, 0, 0.2)",
+      "contentMeta": "rgba(0, 0, 0, 0.7)",
+      "selectionBg": "oklch(0.90 0.05 var(--hue))",
+      "codeblockBg": "oklch(0.17 0.015 var(--hue))",
+      "codeblockTopbarBg": "oklch(0.3 0.02 var(--hue))",
+      "licenseBlockBg": "rgba(0, 0, 0, 0.03)",
+      "linkUnderline": "oklch(0.93 0.04 var(--hue))",
+      "linkHover": "oklch(0.95 0.025 var(--hue))",
+      "linkActive": "oklch(0.90 0.05 var(--hue))",
+      "floatPanelBg": "#ffffff",
+      "topGradientHighlight": "linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.05) 80%, transparent)"
+    },
+    "dark": {
+      "primary": "oklch(0.75 0.14 var(--hue))",
+      "pageBg": "oklch(0.16 0.014 var(--hue))",
+      "cardBg": "oklch(0.23 0.015 var(--hue))",
+      "cardBgTransparent": "rgba(23, 23, 23, 0.6)",
+      "btnContent": "oklch(0.75 0.1 var(--hue))",
+      "btnRegularBg": "oklch(0.33 0.035 var(--hue))",
+      "btnRegularBgHover": "oklch(0.38 0.04 var(--hue))",
+      "btnRegularBgActive": "oklch(0.43 0.045 var(--hue))",
+      "btnPlainBgHover": "oklch(0.30 0.035 var(--hue))",
+      "btnPlainBgActive": "oklch(0.27 0.025 var(--hue))",
+      "btnCardBgHover": "oklch(0.3 0.03 var(--hue))",
+      "btnCardBgActive": "oklch(0.35 0.035 var(--hue))",
+      "lineDivider": "rgba(255, 255, 255, 0.08)",
+      "lineColor": "rgba(255, 255, 255, 0.1)",
+      "metaDivider": "rgba(255, 255, 255, 0.2)",
+      "contentMeta": "rgba(255, 255, 255, 0.6)",
+      "selectionBg": "oklch(0.40 0.08 var(--hue))",
+      "codeblockBg": "oklch(0.17 0.015 var(--hue))",
+      "codeblockTopbarBg": "oklch(0.12 0.015 var(--hue))",
+      "licenseBlockBg": "var(--codeblock-bg)",
+      "linkUnderline": "oklch(0.40 0.08 var(--hue))",
+      "linkHover": "oklch(0.40 0.08 var(--hue))",
+      "linkActive": "oklch(0.35 0.07 var(--hue))",
+      "floatPanelBg": "oklch(0.19 0.015 var(--hue))",
+      "topGradientHighlight": "linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.05) 80%, transparent)"
+    },
+    "admonitions": {
+      "tip": "oklch(0.7 0.14 180)",
+      "note": "oklch(0.7 0.14 250)",
+      "important": "oklch(0.7 0.14 310)",
+      "warning": "oklch(0.7 0.14 60)",
+      "caution": "oklch(0.6 0.2 25)"
+    },
+    "textOpacity": {
+      "light": { "90": "rgba(0,0,0,0.9)", "75": "rgba(0,0,0,0.75)", "50": "rgba(0,0,0,0.5)", "30": "rgba(0,0,0,0.3)", "25": "rgba(0,0,0,0.25)" },
+      "dark": { "90": "rgba(255,255,255,0.9)", "75": "rgba(255,255,255,0.75)", "50": "rgba(255,255,255,0.5)", "30": "rgba(255,255,255,0.3)", "25": "rgba(255,255,255,0.25)" }
+    },
+    "colorSelectionBar": {
+      "light": "linear-gradient(to right, oklch(0.80 0.10 0), oklch(0.80 0.10 30), ..., oklch(0.80 0.10 360))",
+      "dark": "linear-gradient(to right, oklch(0.70 0.10 0), oklch(0.70 0.10 30), ..., oklch(0.70 0.10 360))"
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "sans": "'Roboto', 'sans-serif', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      "mono": "'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "custom": {
+        "name": "MiSans",
+        "src": "https://unpkg.com/misans@4.1.0/lib/Normal/MiSans-Regular.min.css",
+        "weights": [400, 500, 600],
+        "enabled": false
+      },
+      "availableCustomFonts": [
+        { "id": "zen-maru-gothic", "name": "Zen Maru Gothic", "weights": "300;400;500;700;900" },
+        { "id": "inter", "name": "Inter", "weights": "300;400;500;600;700" },
+        { "id": "misans-normal", "name": "MiSans Normal", "weight": 400 },
+        { "id": "misans-regular", "name": "MiSans Regular", "weight": 500 },
+        { "id": "misans-semibold", "name": "MiSans Semibold", "weight": 600 }
+      ]
+    },
+    "headingSizes": {
+      "h1": "1.875rem (text-3xl)"
+    },
+    "bannerTitle": {
+      "sizes": {
+        "mobileSmall": "3.2rem",
+        "mobileLarge": "3.8rem",
+        "tabletSmall": "3.9rem",
+        "tabletLarge": "4rem",
+        "desktopDefault": "3.8rem"
+      },
+      "textShadow": "2px 2px 4px rgba(0, 0, 0, 0.7) / 0 4px 24px rgba(0, 0, 0, 0.6)",
+      "fontWeight": "bold",
+      "lineHeight": "1.1"
+    },
+    "bannerSubtitle": {
+      "sizes": {
+        "mobileSmall": "1rem",
+        "mobileLarge": "1.125rem",
+        "tabletSmall": "1.25rem",
+        "tabletLarge": "1.5rem",
+        "desktopDefault": "1.5rem"
+      },
+      "textShadow": "1px 1px 2px rgba(0, 0, 0, 0.6) / 0 2px 16px rgba(0, 0, 0, 0.6)"
+    },
+    "bannerPostTitle": {
+      "size": "clamp(2rem, 4vw, 3rem)",
+      "textShadow": "0 4px 24px rgba(0, 0, 0, 0.65)"
+    }
+  },
+
+  "spacing": {
+    "scale": {
+      "xs": "4px (0.25rem)",
+      "sm": "8px (0.5rem)",
+      "md": "12px (0.75rem)",
+      "lg": "16px (1rem)",
+      "xl": "20px (1.25rem)",
+      "2xl": "24px (1.5rem)",
+      "3xl": "32px (2rem)",
+      "4xl": "40px (2.5rem)",
+      "5xl": "48px (3rem)"
+    },
+    "widgetGap": {
+      "mobile": "12px",
+      "tablet": "16px",
+      "desktop": "20px"
+    }
+  },
+
+  "borderRadius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "8px",
+    "xl": "12px",
+    "2xl": "16px",
+    "3xl": "24px",
+    "full": "9999px",
+    "large": "16px (1rem) — 卡片/面板统一圆角"
+  },
+
+  "shadows": {
+    "base": {
+      "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px rgba(0, 0, 0, 0.1)",
+      "lg": "0 10px 15px rgba(0, 0, 0, 0.1)",
+      "xl": "0 20px 25px rgba(0, 0, 0, 0.1)",
+      "2xl": "0 25px 50px rgba(0, 0, 0, 0.25)"
+    },
+    "component": {
+      "card": "0 2px 4px rgba(0, 0, 0, 0.005)",
+      "navbar": "0 4px 16px rgba(0, 0, 0, 0.1)",
+      "navbarDark": "0 4px 16px rgba(0, 0, 0, 0.2)",
+      "button": "0 4px 12px rgba(0, 0, 0, 0.15)",
+      "buttonDark": "0 4px 12px rgba(255, 255, 255, 0.1)"
+    }
+  },
+
+  "animation": {
+    "easing": {
+      "standard": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "decelerate": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "accelerate": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+      "sharp": "cubic-bezier(0.4, 0, 0.6, 1)"
+    },
+    "duration": {
+      "fast": "100ms",
+      "normal": "150ms",
+      "medium": "200ms",
+      "slow": "250ms",
+      "slower": "300ms"
+    },
+    "stagger": {
+      "nth-child(1)": "0ms",
+      "nth-child(2)": "30ms",
+      "nth-child(3)": "60ms",
+      "nth-child(4)": "90ms",
+      "nth-child(5)": "120ms"
+    },
+    "pageTransition": {
+      "enter": {
+        "opacity": "0 → 1",
+        "transform": "translateY(2rem) → translateY(0)",
+        "duration": "120ms",
+        "easing": "ease-out"
+      },
+      "leave": {
+        "opacity": "1 → 0",
+        "transform": "translateY(0) → translateY(-2rem)",
+        "duration": "120ms"
+      }
+    },
+    "bannerFadeInUp": {
+      "from": { "opacity": 0, "transform": "translateY(30px)" },
+      "to": { "opacity": 1, "transform": "translateY(0)" },
+      "duration": "300ms",
+      "easing": "ease-out",
+      "subtitleDelay": "300ms"
+    },
+    "waveAnimation": {
+      "duration": "7s / 10s / 13s / 20s (四层)",
+      "easing": "cubic-bezier(0.5, 0.5, 0.45, 0.5)",
+      "iteration": "infinite",
+      "delays": ["-2s", "-3s", "-4s", "-5s"],
+      "translate": "translate3d(-90px, 0, 0) → translate3d(85px, 0, 0)"
+    },
+    "progressBar": {
+      "height": "3px",
+      "duration": "8s",
+      "color": "var(--primary)",
+      "glow": "0 0 8px color-mix(in oklch, var(--primary) 60%, transparent)"
+    },
+    "themeTransition": {
+      "duration": "500ms",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "mode": "View Transitions API (交叉淡化)",
+      "colorTransition": "150ms cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+
+  "layout": {
+    "pageWidth": "100rem",
+    "breakpoints": {
+      "xs": "320px",
+      "sm": "480px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "sidebar": {
+      "position": "双侧边栏",
+      "widths": {
+        "mobile": "100%",
+        "tablet": "280px",
+        "desktop": "320px",
+        "ultrawide": "360px"
+      }
+    },
+    "navbar": {
+      "height": "5.5rem (等效)",
+      "borderRadius": "0 0 0.75rem 0.75rem",
+      "transparentModes": {
+        "semi": "半透明 + 毛玻璃",
+        "full": "完全透明",
+        "semifull": "动态透明 (滚动后变半透明)"
+      },
+      "glassBlur": "20px (可配置)",
+      "fullWidthMode": false
+    }
+  },
+
+  "components": {
+    "card": {
+      "borderRadius": "var(--radius-large) = 16px",
+      "background": "var(--card-bg)",
+      "transition": "colors 150ms",
+      "borderEnabled": true,
+      "borderColor": "var(--line-divider)",
+      "shadow": "xs (微阴影)",
+      "transparentBg": "var(--card-bg-transparent)",
+      "hoverEffect": "none (默认) / translateY(-2px) + shadow (widget)"
+    },
+    "button": {
+      "regular": {
+        "bg": "var(--btn-regular-bg)",
+        "bgHover": "var(--btn-regular-bg-hover)",
+        "bgActive": "var(--btn-regular-bg-active)",
+        "text": "var(--btn-content)",
+        "transition": "colors 150ms",
+        "expandAnimation": "scale(0.85) → scale(1) on hover"
+      },
+      "plain": {
+        "bg": "none",
+        "bgHover": "var(--btn-plain-bg-hover)",
+        "bgActive": "var(--btn-plain-bg-active)",
+        "text": "black/75 (light) / white/75 (dark)",
+        "textHover": "var(--primary)",
+        "expandAnimation": "圆形扩展效果"
+      },
+      "card": {
+        "bg": "var(--card-bg)",
+        "bgHover": "var(--btn-card-bg-hover)",
+        "bgActive": "var(--btn-card-bg-active)"
+      }
+    },
+    "link": {
+      "underlineStyle": "decoration-2 decoration-dashed",
+      "underlineColor": "var(--link-underline)",
+      "underlineHover": "var(--link-hover)",
+      "underlineActive": "var(--link-active)",
+      "underlineOffset": "0.25rem",
+      "expandAnimation": "同 btn-plain"
+    },
+    "floatPanel": {
+      "position": "top-21",
+      "borderRadius": "var(--radius-large)",
+      "background": "var(--card-bg)",
+      "shadow": "xl",
+      "border": "1px solid rgba(0,0,0,0.05) / rgba(255,255,255,0.1) (dark)",
+      "transition": "colors 150ms",
+      "closedState": {
+        "transform": "-translate-y-1",
+        "opacity": 0,
+        "pointerEvents": "none"
+      }
+    },
+    "dropdown": {
+      "triggerTransition": "all 200ms ease-out",
+      "closedTransform": "translateY(-8px)",
+      "contentBackground": "var(--card-bg)",
+      "contentBorderRadius": "var(--radius-large)",
+      "contentShadow": "xl",
+      "contentBorder": "1px solid rgba(0,0,0,0.05) / rgba(255,255,255,0.1)",
+      "itemPadding": "px-4 py-2.5",
+      "itemHover": "text-(--primary) bg-(--btn-plain-bg-hover)",
+      "arrowRotation": "rotate-180 on open"
+    },
+    "toc": {
+      "width": "calc((100vw - var(--page-width)) / 2 - 1rem)",
+      "badgeBg": "oklch(0.9 0.045 var(--hue))",
+      "btnHover": "oklch(0.92 0.015 var(--hue))",
+      "btnActive": "oklch(0.90 0.015 var(--hue))",
+      "itemActive": "oklch(0.70 0.13 var(--hue))",
+      "activeIndicator": {
+        "background": "var(--toc-btn-hover)",
+        "borderRadius": "0.75rem",
+        "transition": "all 200ms ease"
+      }
+    },
+    "markdown": {
+      "inlineCode": {
+        "bg": "var(--inline-code-bg)",
+        "color": "var(--inline-code-color)",
+        "padding": "px-1 py-0.5",
+        "borderRadius": "6px"
+      },
+      "codeBlock": {
+        "bg": "var(--codeblock-bg)",
+        "topbarBg": "var(--codeblock-topbar-bg)",
+        "margin": "my-4"
+      },
+      "blockquote": {
+        "style": "not-italic, border-transparent",
+        "leftBar": "absolute, bg-(--btn-regular-bg), width 4px, rounded-full"
+      },
+      "link": {
+        "color": "var(--primary)",
+        "underline": "decoration-(--link-underline) decoration-1 decoration-dashed underline-offset-4",
+        "hoverBg": "var(--btn-plain-bg-hover)",
+        "hoverBorderBottom": "1px dashed var(--link-hover)"
+      },
+      "image": {
+        "borderRadius": "12px",
+        "cursor": "zoom-in"
+      },
+      "hr": {
+        "borderColor": "var(--line-divider)",
+        "style": "dashed"
+      },
+      "spoiler": {
+        "mask": "var(--primary) → 悬停透明",
+        "lightMode": "color-mix(in oklch, var(--primary) 55%, white 45%)"
+      }
+    },
+    "scrollbar": {
+      "custom": {
+        "width": "6px",
+        "trackBg": "transparent",
+        "thumbBg": "linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2))",
+        "thumbHoverBg": "linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.3))",
+        "thumbBorderRadius": "3px",
+        "darkThumbBg": "linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2))"
+      },
+      "overlay": {
+        "handleSize": "4px → 8px on hover",
+        "handleBorderRadius": "4px",
+        "lightBg": "rgba(0,0,0,0.3) / rgba(0,0,0,0.5) hover / rgba(0,0,0,0.6) active",
+        "darkBg": "rgba(255,255,255,0.4) / rgba(255,255,255,0.6) hover / rgba(255,255,255,0.7) active"
+      }
+    }
+  },
+
+  "backgrounds": {
+    "mode": "banner（横幅壁纸）/ overlay（全屏透明）/ none（纯色）",
+    "switchable": true,
+    "bannerMode": {
+      "desktopImages": [
+        "assets/images/DesktopWallpaper/d1.avif",
+        "assets/images/DesktopWallpaper/d2.avif",
+        "assets/images/DesktopWallpaper/d3.avif",
+        "assets/images/DesktopWallpaper/d4.avif",
+        "assets/images/DesktopWallpaper/d5.avif",
+        "assets/images/DesktopWallpaper/d6.avif"
+      ],
+      "mobileImages": [
+        "assets/images/MobileWallpaper/m1.avif",
+        "assets/images/MobileWallpaper/m2.avif",
+        "assets/images/MobileWallpaper/m3.avif",
+        "assets/images/MobileWallpaper/m4.avif",
+        "assets/images/MobileWallpaper/m5.avif",
+        "assets/images/MobileWallpaper/m6.avif"
+      ],
+      "imagePosition": "0% 20%",
+      "homeText": {
+        "enable": true,
+        "title": "Lovely firefly!",
+        "titleSize": "3.8rem",
+        "subtitle": [
+          "In Reddened Chrysalis, I Once Rest",
+          "From Shattered Sky, I Free Fall",
+          "Amidst Silenced Stars, I Deep Sleep",
+          "Upon Lighted Fyrefly, I Soon Gaze",
+          "From Undreamt Night, I Thence Shine",
+          "In Finalized Morrow, I Full Bloom"
+        ],
+        "subtitleSize": "1.5rem",
+        "typewriter": {
+          "enable": true,
+          "speed": "100ms",
+          "deleteSpeed": "50ms",
+          "pauseTime": "2000ms"
+        }
+      },
+      "navbar": {
+        "transparentMode": "semifull",
+        "enableBlur": true,
+        "blurLevel": 3
+      }
+    },
+    "overlayMode": {
+      "zIndex": -1,
+      "opacity": 0.8,
+      "blur": "10px",
+      "cardOpacity": 0.5
+    },
+    "topGradientHighlight": {
+      "height": "180px",
+      "lightGradient": "linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, transparent 100%)",
+      "darkGradient": "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 100%)",
+      "position": "fixed, top:0, z-index:20, pointer-events:none"
+    }
+  },
+
+  "effects": {
+    "waves": {
+      "description": "首页横幅底部的水波纹动画，四层 SVG 波浪叠加",
+      "enable": {
+        "desktop": true,
+        "mobile": true
+      },
+      "animation": {
+        "type": "CSS animation (translate3d)",
+        "easing": "cubic-bezier(0.5, 0.5, 0.45, 0.5)",
+        "infinite": true,
+        "layers": [
+          { "duration": "7s", "delay": "-2s" },
+          { "duration": "10s", "delay": "-3s" },
+          { "duration": "13s", "delay": "-4s" },
+          { "duration": "20s", "delay": "-5s" }
+        ],
+        "movement": "translate3d(-90px, 0, 0) ↔ translate3d(85px, 0, 0)"
+      },
+      "height": {
+        "desktop": "15vh (min 80px, max 150px)",
+        "tablet": "17vh (min 120px, max 216px)",
+        "mobileSmall": "13vh (min 100px, max 176px)",
+        "ultraSmall": "6vh (min 50px, max 70px)"
+      },
+      "fill": "var(--page-bg) (跟随页面背景色)",
+      "gpuAcceleration": true
+    },
+    "glassMorphism": {
+      "navbarSemi": {
+        "backdropFilter": "blur(20px)",
+        "lightBg": "rgba(255, 255, 255, 0.55)",
+        "darkBg": "rgba(0, 0, 0, 0.55)",
+        "border": "1px solid rgba(255,255,255,0.55) / rgba(0,0,0,0.55)",
+        "shadow": "var(--shadow-navbar)"
+      },
+      "floatPanel": {
+        "lightBg": "rgba(255, 255, 255, 0.95)",
+        "darkBg": "rgba(23, 23, 23, 0.95)"
+      }
+    },
+    "expandAnimation": {
+      "description": "按钮/链接悬停时的圆形扩展效果",
+      "pseudoElement": "::before",
+      "initialScale": "0.85",
+      "hoverScale": "1",
+      "hoverBg": "var(--btn-plain-bg-hover)",
+      "transition": "all 150ms ease-out",
+      "borderRadius": "inherit"
+    },
+    "shimmer": {
+      "description": "组件加载骨架屏闪光效果",
+      "gradient": "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
+      "duration": "1.5s",
+      "iteration": "infinite"
+    },
+    "cardHover": {
+      "transform": "translateY(-2px) / translateY(-4px) desktop",
+      "shadow": "0 4px 12px rgba(0,0,0,0.1) / 0 8px 24px rgba(0,0,0,0.12) desktop"
+    },
+    "pageTransition": {
+      "engine": "Swup",
+      "enter": "fade-in-up 120ms ease-out",
+      "viewTransitionsAPI": {
+        "duration": "500ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "mode": "cross-fade (旧视图淡出 → 新视图淡入)"
+      }
+    },
+    "fancybox": {
+      "overlayBg": "rgba(0, 0, 0, 0.9)",
+      "toolbarBg": "linear-gradient(to bottom, rgba(0,0,0,0.7), transparent)",
+      "toolbarBlur": "4px",
+      "captionBg": "linear-gradient(to top, rgba(0,0,0,0.8), transparent)",
+      "buttonBg": "rgba(0, 0, 0, 0.5)",
+      "buttonBorderRadius": "50%",
+      "buttonSize": "44px desktop / 36px tablet / 32px mobile",
+      "buttonHoverScale": "1.1"
+    },
+    "photoSwipe": {
+      "buttonBg": "rgba(0, 0, 0, 0.4)",
+      "buttonBgHover": "rgba(0, 0, 0, 0.5)",
+      "buttonSize": "3rem",
+      "buttonBorderRadius": "0.75rem",
+      "activeScale": "0.9"
+    }
+  },
+
+  "assets": {
+    "logo": "assets/images/firefly.png",
+    "avatar": "src/assets/images/avatar.avif",
+    "coverDefault": "src/assets/images/cover.avif",
+    "wallpapers": {
+      "desktop": "src/assets/images/DesktopWallpaper/d1-d6.avif",
+      "mobile": "src/assets/images/MobileWallpaper/m1-m6.avif"
+    },
+    "live2dModels": {
+      "path": "public/pio/models/",
+      "models": ["spine/firefly", "live2d/illyasviel"]
+    },
+    "decorations": {
+      "sakura": "public/assets/images/sakura.png"
+    },
+    "musicCovers": "public/assets/music/cover/"
+  },
+
+  "responsiveOverrides": {
+    "mobileSmall": {
+      "maxWidth": "480px",
+      "bannerHeight": "70vh (min 450px)",
+      "mainContentTop": "35vh",
+      "bannerTitleSize": "3.2rem",
+      "bannerSubtitleSize": "1rem"
+    },
+    "mobileLarge": {
+      "range": "481px - 640px",
+      "bannerHeight": "75vh (min 500px)",
+      "mainContentTop": "38vh",
+      "bannerTitleSize": "3.8rem",
+      "bannerSubtitleSize": "1.125rem"
+    },
+    "tabletSmall": {
+      "range": "641px - 767px",
+      "bannerHeight": "72vh (min 520px)",
+      "mainContentTop": "36vh",
+      "bannerTitleSize": "3.9rem",
+      "bannerSubtitleSize": "1.25rem"
+    },
+    "tabletLarge": {
+      "range": "768px - 1023px",
+      "bannerHeight": "70vh (min 500px)",
+      "mainContentTop": "33vh",
+      "bannerTitleSize": "4rem",
+      "bannerSubtitleSize": "1.5rem"
+    },
+    "landscape": {
+      "maxWidth": "1023px, orientation: landscape",
+      "bannerHeight": "60vh (min 300px)",
+      "mainContentTop": "32vh",
+      "bannerTitleSize": "2.2rem",
+      "bannerSubtitleSize": "0.9rem"
+    }
+  },
+
+  "cssFileIndex": {
+    "main.css": "Tailwind 入口 + 组件类定义",
+    "variables.styl": "全局 CSS 变量（颜色/间距/阴影/动画/断点）",
+    "layout-styles.css": "布局/横幅/壁纸/水波纹/响应式",
+    "navbar.css": "导航栏样式（透明模式/毛玻璃/全宽）",
+    "banner-title.css": "横幅标题文字样式",
+    "transition.css": "Swup 页面切换动画 + 进度条",
+    "waves.css": "水波纹动画关键帧",
+    "markdown.css": "Markdown 内容排版",
+    "markdown-extend.styl": "Markdown 扩展（提醒框/GitHub卡片/Mermaid）",
+    "toc.css": "目录（TOC）样式",
+    "widget-responsive.css": "组件响应式布局",
+    "scrollbar.css": "Overlay Scrollbar 样式",
+    "custom-scrollbar.css": "自定义 Webkit 滚动条",
+    "expressive-code.css": "代码块主题适配",
+    "twikoo.css": "评论系统（Twikoo）样式",
+    "fancybox-custom.css": "图片灯箱（Fancybox）样式",
+    "photoswipe.css": "图片查看器（PhotoSwipe）样式"
+  }
+}
