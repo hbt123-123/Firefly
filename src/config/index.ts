@@ -48,3 +48,33 @@ export { sidebarLayoutConfig } from "./sidebarConfig"; // 侧边栏布局配置
 // 核心配置
 export { siteConfig } from "./siteConfig"; // 站点基础配置
 export { sponsorConfig } from "./sponsorConfig"; // 赞助配置
+
+// 设计系统配置
+export {
+	designSystemConfig,
+	generateCSSVariables,
+	type DesignSystemConfig,
+	type ThemeConfig,
+	type ColorSystem,
+	type ColorPalette,
+	type TypographySystem,
+	type SpacingSystem,
+	type BorderRadiusSystem,
+	type ShadowSystem,
+	type AnimationSystem,
+	type BreakpointSystem,
+	type GraphicsConfig,
+	type IconConfig,
+	type IllustrationConfig,
+	type SVGConfig,
+	type ComponentsConfig,
+	type ButtonComponentConfig,
+	type InputComponentConfig,
+	type CardComponentConfig,
+	type DialogComponentConfig,
+	type NavbarComponentConfig,
+	type SidebarComponentConfig,
+	type TabsComponentConfig,
+	type TableComponentConfig,
+	type DesignSpecifications,
+} from "./designSystemConfig"; // 设计系统配置
