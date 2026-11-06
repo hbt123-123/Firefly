@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" font-family="Cambria Math, Times New Roman, serif" font-size="19">
+  <defs>
+    <marker id="ar4" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="1.6">
+    <!-- 坐标轴 -->
+    <line x1="30" y1="200" x2="298" y2="200" marker-end="url(#ar4)"/>
+    <line x1="70" y1="232" x2="70" y2="22" marker-end="url(#ar4)"/>
+    <g fill="#111" stroke="none">
+      <text x="286" y="222">x</text>
+      <text x="78" y="30">y</text>
+      <text x="52" y="218">O</text>
+      <text x="50" y="101">C</text>
+    </g>
+    <!-- y = C -->
+    <line x1="70" y1="95" x2="268" y2="95" stroke-width="2.2"/>
+    <circle cx="70" cy="95" r="3.2" fill="#111" stroke="none"/>
+    <text x="180" y="86" fill="#111" stroke="none">y = C</text>
+  </g>
+</svg>

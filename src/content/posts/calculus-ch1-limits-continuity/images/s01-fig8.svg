@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 262" font-family="Cambria Math, Times New Roman, serif" font-size="16">
+  <defs>
+    <marker id="ar8" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111"/>
+    </marker>
+    <clipPath id="c1"><rect x="6" y="42" width="236" height="186"/></clipPath>
+    <clipPath id="c2"><rect x="246" y="42" width="236" height="186"/></clipPath>
+    <clipPath id="c3"><rect x="486" y="42" width="236" height="186"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="1.4">
+    <!-- ============ sin，原点(120,140) ============ -->
+    <line x1="8" y1="140" x2="244" y2="140" marker-end="url(#ar8)"/>
+    <line x1="120" y1="232" x2="120" y2="30" marker-end="url(#ar8)"/>
+    <g clip-path="url(#c1)">
+      <path d="M1,140 C30.9,86.7 30.9,86.7 60.7,140 C90.6,193.3 90.6,193.3 120.4,140 C150.3,86.7 150.3,86.7 180.1,140 C210,193.3 210,193.3 239.8,140" stroke-width="2"/>
+    </g>
+    <g fill="#111" stroke="none" text-anchor="middle">
+      <text x="10" y="168" text-anchor="start">−2π</text><text x="60.7" y="168">−π</text>
+      <text x="180.1" y="168">π</text><text x="234" y="168" text-anchor="end">2π</text>
+      <text x="110" y="93" text-anchor="end">1</text><text x="110" y="197" text-anchor="end">−1</text>
+      <text x="120" y="22">y = sin x</text>
+    </g>
+
+    <!-- ============ cos，原点(360,140)：sin 平移 -29.85 ============ -->
+    <line x1="248" y1="140" x2="484" y2="140" marker-end="url(#ar8)"/>
+    <line x1="360" y1="232" x2="360" y2="30" marker-end="url(#ar8)"/>
+    <g clip-path="url(#c2)">
+      <path d="M241.15,140 C271.05,86.7 271.05,86.7 300.85,140 C330.75,193.3 330.75,193.3 360.55,140 C390.45,86.7 390.45,86.7 420.25,140 C450.15,193.3 450.15,193.3 479.95,140" stroke-width="2"/>
+    </g>
+    <g fill="#111" stroke="none" text-anchor="middle">
+      <text x="250" y="168" text-anchor="start">−2π</text><text x="300.85" y="168">−π</text>
+      <text x="420.25" y="168">π</text><text x="474" y="168" text-anchor="end">2π</text>
+      <text x="350" y="93" text-anchor="end">1</text><text x="350" y="197" text-anchor="end">−1</text>
+      <text x="360" y="22">y = cos x</text>
+    </g>
+
+    <!-- ============ tan，原点(600,140) ============ -->
+    <line x1="488" y1="140" x2="724" y2="140" marker-end="url(#ar8)"/>
+    <line x1="600" y1="232" x2="600" y2="30" marker-end="url(#ar8)"/>
+    <line x1="570.15" y1="44" x2="570.15" y2="226" stroke-dasharray="5,5"/>
+    <line x1="629.85" y1="44" x2="629.85" y2="226" stroke-dasharray="5,5"/>
+    <g clip-path="url(#c3)">
+      <path d="M515,222 C535,220 555,80 567,58" stroke-width="2"/>
+      <path d="M573,222 C587,220 591,150 600,140 C609,130 613,60 627,58" stroke-width="2"/>
+      <path d="M633,222 C653,220 673,80 685,58" stroke-width="2"/>
+    </g>
+    <g fill="#111" stroke="none" text-anchor="middle">
+      <text x="570.15" y="168">−π/2</text><text x="629.85" y="168">π/2</text>
+      <text x="600" y="22">y = tan x</text>
+    </g>
+  </g>
+</svg>

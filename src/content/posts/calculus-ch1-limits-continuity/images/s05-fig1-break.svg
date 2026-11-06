@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="240" viewBox="0 0 360 240">
+<rect width="360" height="240" fill="#fff"/>
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#333"/></marker></defs>
+<line x1="0" y1="200" x2="338" y2="200" stroke="#333" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="40" y1="4" x2="40" y2="214" stroke="#333" stroke-width="1.5" marker-end="url(#ar)"/>
+<polyline points="0.0,200.0 264.0,2.0" fill="none" stroke="#1a5fb4" stroke-width="2.2"/>
+<line x1="80" y1="140" x2="80" y2="200" stroke="#999" stroke-width="1" stroke-dasharray="4 4"/>
+<circle cx="80" cy="140" r="5" fill="#fff" stroke="#1a5fb4" stroke-width="2.2"/>
+<circle cx="80" cy="200" r="4.5" fill="#333"/>
+<text x="330" y="193" font-size="16" fill="#333" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">x</text>
+<text x="48" y="17" font-size="16" fill="#333" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">y</text>
+<text x="24" y="217" font-size="14" fill="#333" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">O</text>
+<text x="75" y="217" font-size="13" fill="#333" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">1</text>
+<text x="27" y="145" font-size="13" fill="#333" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">2</text>
+<text x="118" y="74" font-size="14" fill="#1a5fb4" text-anchor="start" font-family="Microsoft YaHei, Arial, sans-serif">y=x+1</text>
+</svg>

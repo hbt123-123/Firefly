@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" font-family="Cambria Math, Times New Roman, serif" font-size="18">
+  <defs>
+    <marker id="ar10" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <!-- 原点(160,200) 比例55 -->
+  <g fill="none" stroke="#111" stroke-width="1.5">
+    <line x1="30" y1="200" x2="298" y2="200" marker-end="url(#ar10)"/>
+    <line x1="160" y1="232" x2="160" y2="22" marker-end="url(#ar10)"/>
+    <g fill="#111" stroke="none">
+      <text x="286" y="222">x</text><text x="168" y="30">y</text>
+      <text x="142" y="218">O</text>
+    </g>
+    <path d="M60,100 L160,200 L260,100" stroke-width="2.2"/>
+    <text x="205" y="120" fill="#111" stroke="none">y = |x|</text>
+  </g>
+</svg>

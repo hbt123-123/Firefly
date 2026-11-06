@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" font-family="Cambria Math, Times New Roman, serif" font-size="17">
+  <defs>
+    <marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#111" stroke-width="1.4">
+    <!-- ===== 第1组 一对一 ===== -->
+    <g transform="translate(0,0)">
+      <ellipse cx="45" cy="115" rx="26" ry="75"/>
+      <ellipse cx="150" cy="115" rx="26" ry="75"/>
+      <g fill="#111" stroke="none">
+        <circle cx="45" cy="70" r="2.6"/><circle cx="45" cy="115" r="2.6"/><circle cx="45" cy="160" r="2.6"/>
+        <circle cx="150" cy="70" r="2.6"/><circle cx="150" cy="115" r="2.6"/><circle cx="150" cy="160" r="2.6"/>
+        <text x="20" y="76" text-anchor="end">x₁</text><text x="20" y="121" text-anchor="end">x₂</text><text x="20" y="166" text-anchor="end">x₃</text>
+        <text x="175" y="76">y₁</text><text x="175" y="121">y₂</text><text x="175" y="166">y₃</text>
+        <text x="32" y="26" font-style="italic">X</text><text x="143" y="26" font-style="italic">Y</text>
+      </g>
+      <path d="M45,70 L143,70" marker-end="url(#ar3)"/>
+      <path d="M45,115 L143,115" marker-end="url(#ar3)"/>
+      <path d="M45,160 L143,160" marker-end="url(#ar3)"/>
+      <text x="97" y="232" fill="#111" stroke="none" text-anchor="middle" font-size="18">一对一映射</text>
+    </g>
+    <!-- ===== 第2组 多对一 ===== -->
+    <g transform="translate(190,0)">
+      <ellipse cx="45" cy="115" rx="26" ry="75"/>
+      <ellipse cx="150" cy="115" rx="26" ry="75"/>
+      <g fill="#111" stroke="none">
+        <circle cx="45" cy="70" r="2.6"/><circle cx="45" cy="115" r="2.6"/><circle cx="45" cy="160" r="2.6"/>
+        <circle cx="150" cy="70" r="2.6"/><circle cx="150" cy="160" r="2.6"/>
+        <text x="20" y="76" text-anchor="end">x₁</text><text x="20" y="121" text-anchor="end">x₂</text><text x="20" y="166" text-anchor="end">x₃</text>
+        <text x="175" y="76">y₁</text><text x="175" y="166">y₂</text>
+        <text x="32" y="26" font-style="italic">X</text><text x="143" y="26" font-style="italic">Y</text>
+      </g>
+      <path d="M45,70 C80,70 110,70 143,70" marker-end="url(#ar3)"/>
+      <path d="M45,115 C80,110 110,82 143,73" marker-end="url(#ar3)"/>
+      <path d="M45,160 L143,160" marker-end="url(#ar3)"/>
+      <text x="97" y="232" fill="#111" stroke="none" text-anchor="middle" font-size="18">多对一映射</text>
+    </g>
+    <!-- ===== 第3组 一对多 ===== -->
+    <g transform="translate(380,0)">
+      <ellipse cx="45" cy="115" rx="26" ry="75"/>
+      <ellipse cx="150" cy="115" rx="26" ry="75"/>
+      <g fill="#111" stroke="none">
+        <circle cx="45" cy="115" r="2.6"/>
+        <circle cx="150" cy="70" r="2.6"/><circle cx="150" cy="115" r="2.6"/><circle cx="150" cy="160" r="2.6"/>
+        <text x="20" y="121" text-anchor="end">x₁</text>
+        <text x="175" y="76">y₁</text><text x="175" y="121">y₂</text><text x="175" y="166">y₃</text>
+        <text x="32" y="26" font-style="italic">X</text><text x="143" y="26" font-style="italic">Y</text>
+      </g>
+      <path d="M45,115 C80,110 110,82 143,73" marker-end="url(#ar3)"/>
+      <path d="M45,115 L143,115" marker-end="url(#ar3)"/>
+      <path d="M45,115 C80,120 110,150 143,157" marker-end="url(#ar3)"/>
+      <text x="97" y="232" fill="#111" stroke="none" text-anchor="middle" font-size="18">一对多映射</text>
+    </g>
+    <!-- ===== 第4组 多对多 ===== -->
+    <g transform="translate(570,0)">
+      <ellipse cx="45" cy="115" rx="26" ry="75"/>
+      <ellipse cx="150" cy="115" rx="26" ry="75"/>
+      <g fill="#111" stroke="none">
+        <circle cx="45" cy="70" r="2.6"/><circle cx="45" cy="115" r="2.6"/><circle cx="45" cy="160" r="2.6"/>
+        <circle cx="150" cy="70" r="2.6"/><circle cx="150" cy="115" r="2.6"/><circle cx="150" cy="160" r="2.6"/>
+        <text x="20" y="76" text-anchor="end">x₁</text><text x="20" y="121" text-anchor="end">x₂</text><text x="20" y="166" text-anchor="end">x₃</text>
+        <text x="175" y="76">y₁</text><text x="175" y="121">y₂</text><text x="175" y="166">y₃</text>
+        <text x="32" y="26" font-style="italic">X</text><text x="143" y="26" font-style="italic">Y</text>
+      </g>
+      <path d="M45,70 C85,70 105,70 143,70" marker-end="url(#ar3)"/>
+      <path d="M45,70 C85,100 105,110 143,112" marker-end="url(#ar3)"/>
+      <path d="M45,115 C85,90 105,150 143,157" marker-end="url(#ar3)"/>
+      <path d="M45,160 C85,150 105,80 143,73" marker-end="url(#ar3)"/>
+      <path d="M45,160 C85,160 105,160 143,160" marker-end="url(#ar3)"/>
+      <text x="97" y="232" fill="#111" stroke="none" text-anchor="middle" font-size="18">多对多映射</text>
+    </g>
+  </g>
+</svg>
